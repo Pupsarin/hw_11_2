@@ -1,0 +1,16 @@
+{
+  "name": "dz_11_2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "json-server": "^0.14.0",
+    "lite-server": "^2.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1" 
+  },
+  "author": "",
+  "license": "ISC"
+}
