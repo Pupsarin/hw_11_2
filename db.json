@@ -1,18 +1,11 @@
 {
-  "lastUpdate": {
-    "data": "11/11/2018",
-    "time": "9:09:10 PM"
-  },
+    "lastUpdate": {
+    "data": "26.10.2018",
+    "time": "12:38:01"
+    },
   "users": [
     {
       "id": 1,
-      "name": "Guest",
-      "lastName": "Anonymous",
-      "email": "none",
-      "photoURL": "https://cdn.pixabay.com/photo/2013/07/13/10/52/fawkes-157941_960_720.png"
-    },
-    {
-      "id": 5,
       "name": "Владимир",
       "lastName": "Кононенко",
       "email": "vladimir.kononenko@gmail.com",
@@ -75,32 +68,11 @@
     },
     {
       "userid": 3,
-      "date": "05.08.2018",
+"date": "05.08.2018",
       "time": "10:30:15",
       "title": "XMLHttpRequest",
       "body": "Method POST",
       "id": 8
-    },
-    {
-      "date": "11/11/2018",
-      "time": "8:32:29 PM",
-      "userid": 4,
-      "body": "Vse rabotaet ! ",
-      "id": 9
-    },
-    {
-      "date": "11/11/2018",
-      "time": "8:58:10 PM",
-      "userid": 1,
-      "body": "Hi",
-      "id": 10
-    },
-    {
-      "date": "11/11/2018",
-      "time": "9:09:10 PM",
-      "userid": 1,
-      "body": "sdfs",
-      "id": 11
     }
   ],
   "comments": [

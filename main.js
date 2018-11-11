@@ -43,6 +43,62 @@ chatRegisterButton.style = `
     overflow: hidden;
 `;
 
+let form = appElem('form');
+form.style.display = 'none';
+form.method = 'post';
+
+let nameInput = appElem('input', form);
+nameInput.type = 'text';
+nameInput.name = "name";
+nameInput.placeholder = 'Name';
+
+let lastNameInput = appElem('input', form);
+lastNameInput.type = 'text';
+lastNameInput.placeholder = 'Lastname';
+lastNameInput.name = "lastName";
+
+let emailInput = appElem('input', form);
+emailInput.type = 'email';
+emailInput.placeholder = 'email';
+emailInput.name = "email";
+
+let photoURLInput = appElem('input', form);
+photoURLInput.type = 'url';
+photoURLInput.placeholder = 'photo url';
+photoURLInput.name = "photoURL";
+
+let submit = appElem('input', form);
+submit.type = 'submit';
+submit.value = 'Submit';
+
+/**
+ * NEW CODE HW 11-2
+ */
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    let data = new FormData(form);
+    fetch('http://localhost:3000/users', {
+        method: 'POST',
+        body: JSON.stringify({
+            name: data.get('name'),
+            lastName: data.get('lastName'),
+            email: data.get('email'),
+            photoURL: data.get('photoURL')
+            }),
+        headers: {
+            "Content-type": "application/json"
+        }
+    });
+    form.reset();
+    form.style.display = 'none';
+}, false);
+
+chatRegisterButton.onclick = function(e) {
+    if (form.style.display === 'block') {} else {
+        form.style.display = 'block';
+    }
+}
+
 let buildChat = function() {
     chat = appElem('section')
     chat.style = `
@@ -70,8 +126,10 @@ let updateChat = async function() {
         getData("posts").then(x => posts = x)
     ])
     if (!currentUser) {
-        currentUser = users[0];
-        currentUserId = currentUser.id;
+        currentUser = users [
+            Math.floor ( Math.random () * users.length )
+        ]
+        currentUserId = currentUser.id
     }
 
     initChat()
